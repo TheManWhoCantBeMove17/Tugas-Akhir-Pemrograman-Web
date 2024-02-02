@@ -1,0 +1,444 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="w3.css">
+    <title>Gang Alit Garage Official Website</title>
+	<script>
+       function tampil(tampilkan)
+	   {
+        var i;
+        var x = document.getElementsByClassName("kota");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+        document.getElementById(tampilkan).style.display = "block";
+		document.getElementById(footer).style.display = "block";
+       }
+		let slideIndex =[1,0];
+		let slideId = ["mySlides1"]
+		showSlides(1,1);
+
+		function plusSlides(n, no) {
+		  showSlides(slideIndex[no] += n, no);
+		}
+
+		function showSlides(n, no) {
+		  let i;
+		  let x = document.getElementsByClassName(slideId[no]);
+		  if (n > x.length) {slideIndex[no] = 1}    
+		  if (n < 1) {slideIndex[no] = x.length}
+		  for (i = 0; i < x.length; i++) {
+			 x[i].style.display = "none";  
+		  }
+		  x[slideIndex[no]-1].style.display = "block";  
+		}
+    </script>
+	
+    <style>
+
+        header {
+            text-align: right;
+            padding: 10px;
+        }
+		
+        section {
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f2f2f2
+			position: relative;
+			bottom:0px;
+			
+		*{box-sizing: border-box}
+		.mySlides1{display: none}
+		img {vertical-align: middle;}
+
+		.slideshow-container {
+		  max-width: 100%;
+		  position: relative;
+		  margin: auto;
+		}
+
+		.prev, .next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 50%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -22px;
+		  color: black;
+		  font-weight: bold;
+		  font-size: 18px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		  user-select: none;
+		}
+
+		.next {
+		  right: 0;
+		  border-radius: 3px 0 0 3px;
+		}
+
+		.prev:hover, .next:hover {
+		  background-color: black;
+		  color: white;
+		}
+		
+    </style>
+	<style type="text/css">
+        body { font-family: RobotoSlab-Regular; }
+        h1 { font-family: Cambria,"Times New Roman",serif; }
+    </style>
+</head>
+<body>
+    <header>
+		<div class="w3-bar w3-black w3-card-4" style="display: flex; justify-content: left;">
+			<div class="w3-panel w3-bar-item" style="width: 25%;">
+				<img src="logo.png" alt="" width="35%">
+			</div>	
+			<button class="w3-bar-item w3-button" onclick="tampil('home')">Home </button>
+			<div class="w3-dropdown-hover w3-panel w3-bar-item" style="display: flex; justify-content: center;">
+			<button class="w3-button">Katalog Produk</button>
+				<div class="w3-dropdown-content w3-bar-block w3-card-4 w3-black">
+					<button class="w3-bar-item w3-button" onclick="tampil('nokenas')">Noken As</button>
+					<button class="w3-bar-item w3-button" onclick="tampil('cvt')">CVT</button>
+					<button class="w3-bar-item w3-button" onclick="tampil('sparepart')">Sparepart</button>
+				</div>
+			</div>
+			<button class="w3-bar-item w3-button" onclick="tampil('informasi')">Informasi</button>
+			<button class="w3-bar-item w3-button" onclick="tampil('tentangkami')">About Us</button>
+			<button class="w3-bar-item w3-button" onclick="tampil('kalkulator')">Kalkulator</button>
+			<button class="w3-bar-item w3-button" onclick="tampil('profile')">My Profile</button>
+		</div>
+	</header>
+	
+	<div class="w3-container kota">
+		<center><h1>Selamat datang di web Gang Alit Garage</h1></center>
+		<div class="slideshow-container">
+		<center>
+			<div class="mySlides1 fade">
+				<div class="numbertext">1 / 4</div>
+				<img src="banner.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides1 fade" style="display:none;">
+				<div class="numbertext">2 / 4</div>
+				<img src="ig1.png" style="width:100%" >
+			</div>
+
+			<div class="mySlides1 fade" style="display:none;">
+				<div class="numbertext">3 / 4</div>
+				<img src="ig2.png" style="width:100%">
+			</div>
+			  
+			<div class="mySlides1 fade" style="display:none;">
+				<div class="numbertext">4 / 4</div>
+				<img src="logo.png" style="width:100%">
+			</div>
+			<center>
+				<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+			</center>
+			<br>
+	
+		</center>
+		</div>
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+		</div>
+		<footer>
+			<p>&copy; 2024 Gang Alit Garage. All rights reserved.</p>
+		</footer>
+	</div>
+
+	
+	<div id="nokenas"class="w3-row-padding w3-padding-32 w3-container kota" style="display:none;">
+		<h2>NOKEN AS MODIF REQUEST	</h2>
+		<div class="w3-third w3-margin-bottom" style="height: 40%;">
+		<img src="noken1.jpg" alt="" style="width:100%" class="w3-hover-opacity" >
+				<div class="w3-container w3-white">
+					<p><b>Noken As Mio J </b></p>
+				</div>
+		</div>
+			
+		<div class="w3-third w3-margin-bottom" style="height: 40%;">
+		<img src="noken2.jpg" alt="" style="width:100%" class="w3-hover-opacity">
+			<div class="w3-container w3-white">
+				<p><b>Noken As Beat Karbu</b></p>
+			</div>
+		</div>
+			
+		<div class="w3-third w3-margin-bottom" style="height: 50%;">
+		<img src="noken3.jpg" alt="Spao T-Shirt" style="width:100%" class="w3-hover-opacity">
+			<div class="w3-container w3-white">
+				<p><b>Noken As Beat FI</b></p>
+			</div>
+		</div>	
+	</div>
+	
+	<div id="cvt" class="w3-row-padding w3-padding-32 w3-container kota" style="display: none;">
+		<h2>CVT FULL MODIF</h2>
+		<div class="w3-third w3-margin-bottom" style="height: 40%;">
+		<img src="cvt1.jpg" alt="" style="width:100%" class="w3-hover-opacity" >
+				<div class="w3-container w3-white">
+					<p><b>CVT Mio J </b></p>
+				</div>
+		</div>
+			
+		<div class="w3-third w3-margin-bottom" style="height: 40%;">
+		<img src="cvt2.jpg" alt="" style="width:100%" class="w3-hover-opacity">
+			<div class="w3-container w3-white">
+				<p><b>CVT Beat Karbu</b></p>
+			</div>
+		</div>
+			
+		<div class="w3-third w3-margin-bottom" style="height: 50%;">
+		<img src="cvt3.jpg" alt="Spao T-Shirt" style="width:100%" class="w3-hover-opacity">
+			<div class="w3-container w3-white">
+				<p><b>CVT Beat FI</b></p>
+			</div>
+		</div>
+	</div>
+	
+	<div id="sparepart" class="w3-row-padding w3-padding-32 w3-container kota" style="display:none;">
+		<h2>Sparepart</h2>
+		<table>
+			<tr>
+				<td>	
+					<div class="w3-third w3-margin-bottom" style="height: 30%;">
+						<img src="oli1.jpg" alt="" style="width:50%" class="w3-hover-opacity" >
+							<div class="w3-container w3-white">
+								<p><b>OLI ENDURO MATIC </b></p>
+							</div>
+					</div>
+				</td><td>		
+					<div class="w3-third w3-margin-bottom" style="height: 30%;">
+						<img src="oli2.jpg" alt="" style="width:50%" class="w3-hover-opacity">
+						<div class="w3-container w3-white">
+							<p><b>OLI YAMALUBE</b></p>
+						</div>
+					</div>
+				</td><td>		
+					<div class="w3-third w3-margin-bottom" style="height: 30%;">
+						<img src="oli3.jpg" alt="" style="width:50%" class="w3-hover-opacity">
+						<div class="w3-container w3-white">
+							<p><b>OLI MOTUL</b></p>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="w3-third w3-margin-bottom" style="height: 30%;">
+						<img src="paking1.jpg" alt="" style="width:50%" class="w3-hover-opacity">
+						<div class="w3-container w3-white">
+							<p><b>PAKING SET MIO</b></p>
+						</div>
+					</div>
+				</td><td>
+					<div class="w3-third w3-margin-bottom" style="height: 30%;">
+						<img src="paking2.jpg" alt="" style="width:50%" class="w3-hover-opacity">
+						<div class="w3-container w3-white">
+							<p><b>PAKING SET BEAT</b></p>
+						</div>
+					</div>
+				</td><td>	
+					<div class="w3-third w3-margin-bottom" style="height: 30%;">
+						<img src="paking3.jpg" alt="" style="width:50%" class="w3-hover-opacity">
+						<div class="w3-container w3-white">
+							<p><b>PAKING SET FU</b></p>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	
+    <div id="home" class="w3-container kota w3-animate-zoom" style="display:none;">
+		<section>
+			<h2>Selamat datang di web kami!</h2>
+			<p>Kami menyediakan berbagai macam sparepart untuk motor Anda. Temukan yang Anda butuhkan dan pesan sekarang.</p>
+			<div class="slideshow-container">
+				<div class="mySlides">
+				  <img src="banner.jpg" style="width:100%">
+				</div>
+			</div>
+			
+			<h2>Produk Kami</h2>
+			<ul>
+				<li>Noken As</li>
+				<li>CVT</li>
+				<li>Sparepart </li>
+			</ul>
+
+			<h2>Hubungi Kami</h2>
+			<p>Jika Anda memiliki pertanyaan atau membutuhkan bantuan, hubungi kami di <a href="https://heylink.me/gang_alit_garage">Gang Alit Garage</a>.</p>
+		</section>
+		<footer>
+			<p>&copy; 2024 Gang Alit Garage. All rights reserved.</p>
+		</footer>
+	</div>
+	
+	<div id="informasi" class="w3-container kota w3-animate-zoom w3-center" style="display:none">
+		<center>
+			<table>
+				<tr>
+					<td>
+						<button class="w3-panel w3-button menu w3-red w3-round-large">
+							<a href="https://www.instagram.com/wawan78super"><img src="ig.png" style="width:400px ;height:300px;"></a>
+							<h2>Instagram</h2>
+						</button>
+					</td>
+					<td>
+						<button class="w3-panel w3-button menu w3-green w3-round-large">
+							<a href="https://wa.me/08986707378"><img src="walogo.png" style="width:400px ;height:300px;"></a>
+							<h2>Whatsaap</h2>
+						</button>
+					</td><td>
+						<button class="w3-panel w3-button menu w3-black w3-round-large">
+							<img src="tiktok.png" style="width:400px ;height:300px;">
+							<h2>Tiktok</h2>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<center>
+						<button class="w3-panel w3-button menu w3-black w3-round-large">
+								<a href="https://maps.app.goo.gl/HK3X47hwB32T5ABg7"><img src="gmaps.png" style="width:400px ;height:300px;"></a>
+								<h2>Google Maps</h2>
+						</button>
+					</center>
+					</td>
+				</tr>
+			</table>
+		</center>
+	</div>
+	
+	
+	<div id="profile" class="w3-container kota w3-animate-zoom w3-text-black" style="display:none">
+		<center>
+			<img src="me.jpg" style="width=80%">
+			<hr>
+			<h2>Naufal Fauzan Nurroni</h2>
+			<h2>10123455</h2>
+			<h2>IF-11</h2>
+		</center>
+    </div>
+	
+	<div id="tentangkami" class="w3-container kota w3-animate-zoom w3-center" style="display:none">
+		<div class="slideshow-container">
+		<center>
+			<div class="mySlides1" >
+				<div class="numbertext">1 / 4</div>
+				<img src="banner.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides1" style="display:none">
+				<div class="numbertext">2 / 4</div>
+				<img src="motor.jpg" style="width:100%" >
+			</div>
+
+			<div class="mySlides1" style="display:none">
+				<div class="numbertext">3 / 4</div>
+				<img src="head.jpg" style="width:100%">
+			</div>
+			  
+			<div class="mySlides1" style="display:none">	
+				<div class="numbertext">4 / 4</div>
+				<img src="engine.jpg" style="width:100%">
+			</div>
+			<center>
+				<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+			</center>
+		</center>
+		</div>
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+		</div>
+		<br>
+		<p>Gang Alit Garage merupakan nama yang terkilas karena lokasi bengkel yang awalnya berada pada samping rumah di dalam gang yang sangat kecil.
+               Namun Bukan berarti bengkel kecil tidak bisa berkembang, justru inilah titik awal untuk menjadi lebih baik.
+        </p>
+        <p>Gang Alit Garage terdiri dari 2 orang mekanik yang bernama Maswan (A Wawan) dan Mang Ableh (A Iin), mereka merupakan otak dari Bengkel Gang Alit</p>
+	</div>
+	
+	<div id="kalkulator" class="w3-container kota w3-animate-zoom" style="display: none;">
+        <form name="form1">
+            <script>
+                function hitung()
+					{
+						var piston=document.form1.piston.value;
+						var stroke=document.form1.stroke.value;
+						var buret=document.form1.buret.value;
+						var busi=document.form1.busi.value;
+						var silinder=document.form1.silinder.value;
+						
+						var cc = (Math.PI / 4) * Math.pow(piston, 2) * stroke;
+						document.form1.cc.value=cc	
+					
+						var cc=document.form1.cc.value;
+						var kompresi=(buret-busi+silinder)/busi
+						document.form1.kompresi.value=kompresi
+                    
+                    
+					}   
+				function reset()
+					{
+						reset
+					}
+            </script>
+        
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="css/w3.css">
+        
+            <div class="w3-containe w3-animate-zoom">
+                <div class="w3-panel w3-gray w3-card-4">
+                    <center>
+                        <p>
+                            <h3>KALKULATOR HITUNG CC DAN KOMPRESI DINAMIS</h3>
+                        </p>
+                    </center>
+                </div>
+                <div class="w3-panel w3-gray w3-card-4">
+                    <center>
+                        <table>
+							<center><tr><td>Hitung CC</tr></center>
+							<tr><td>
+							<tr><td>Diamater Piston<td><input class="w3-input" "w3-text" name="piston" style="width:90%"><td>MM
+							<tr><td>Panjang Stroke<td><input class="w3-input" "w3-text" name="stroke" style="width:90%"><td>MM
+							<tr><td colspan=2><hr>
+							<center><tr><td>Hitung Komresi dengan buret</center>
+							<tr><td>Volume Cairan Buret<td><input class="w3-input" type="text" name="buret"><td>CC
+							<tr><td>Volume Drat Busi<td><input class="w3-input" type="text" name="busi"><td>CC
+							<tr><td>Volume Silinder<td><input class="w3-input" type="text" name="silinder"><td>CC
+							<tr><td colspan=2><hr>
+                            <tr><td>Total CC<td><input class="w3-input" type="text" name="cc"><td>CC
+                            <tr><td>Rasio Kompresi<td><input class="w3-input" type="text" name="kompresi"></tr>
+                        </table>
+                    </center>
+                </div>
+                <div class="w3-panel">
+                    <p>
+                        <center>
+                            <input type="button" class="w3-btn w3-purple" value="Proses" onclick="hitung()">
+                            <input type="button" class="w3-btn w3-purple" value="Reset" onclick="hapus()">
+                        </center>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
